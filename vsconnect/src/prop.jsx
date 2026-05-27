@@ -133,3 +133,17 @@ function FormularioLogin() {
 }
 
 
+//Estado com arrays
+const [listItens, setListaItens] = useState([]);
+
+function adicionarItem(novoItem) {
+    setListaItens([...listItens, novoItem])
+}
+
+listItens.push("React");
+
+function removerItens(itemParaRemover) {
+    setListaItens(listItens.filter(item => item != itemParaRemover))
+}
+
+
